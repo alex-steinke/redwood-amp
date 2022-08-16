@@ -1,8 +1,9 @@
-import { Field, InputType } from "@nestjs/graphql";
-import { QueryMode } from "./QueryMode";
-import { ApiProperty } from "@nestjs/swagger";
-import { IsOptional } from "class-validator";
-import { Type } from "class-transformer";
+import { Field, InputType } from '@nestjs/graphql'
+import { ApiProperty } from '@nestjs/swagger'
+import { Type } from 'class-transformer'
+import { IsOptional } from 'class-validator'
+
+import { QueryMode } from './QueryMode'
 
 @InputType({
   isAbstract: true,
@@ -28,7 +29,7 @@ export class StringNullableFilter {
     nullable: true,
   })
   @Type(() => String)
-  in?: string[] | null;
+  in?: string[] | null
 
   @ApiProperty({
     required: false,
@@ -39,7 +40,7 @@ export class StringNullableFilter {
     nullable: true,
   })
   @Type(() => String)
-  notIn?: string[] | null;
+  notIn?: string[] | null
 
   @ApiProperty({
     required: false,
@@ -50,7 +51,7 @@ export class StringNullableFilter {
     nullable: true,
   })
   @Type(() => String)
-  lt?: string;
+  lt?: string
 
   @ApiProperty({
     required: false,
@@ -61,7 +62,7 @@ export class StringNullableFilter {
     nullable: true,
   })
   @Type(() => String)
-  lte?: string;
+  lte?: string
 
   @ApiProperty({
     required: false,
@@ -72,7 +73,7 @@ export class StringNullableFilter {
     nullable: true,
   })
   @Type(() => String)
-  gt?: string;
+  gt?: string
 
   @ApiProperty({
     required: false,
@@ -83,7 +84,7 @@ export class StringNullableFilter {
     nullable: true,
   })
   @Type(() => String)
-  gte?: string;
+  gte?: string
 
   @ApiProperty({
     required: false,
@@ -94,7 +95,7 @@ export class StringNullableFilter {
     nullable: true,
   })
   @Type(() => String)
-  contains?: string;
+  contains?: string
 
   @ApiProperty({
     required: false,
@@ -105,7 +106,7 @@ export class StringNullableFilter {
     nullable: true,
   })
   @Type(() => String)
-  startsWith?: string;
+  startsWith?: string
 
   @ApiProperty({
     required: false,
@@ -116,17 +117,17 @@ export class StringNullableFilter {
     nullable: true,
   })
   @Type(() => String)
-  endsWith?: string;
+  endsWith?: string
 
   @ApiProperty({
     required: false,
-    enum: ["Default", "Insensitive"],
+    enum: ['Default', 'Insensitive'],
   })
   @IsOptional()
   @Field(() => QueryMode, {
     nullable: true,
   })
-  mode?: QueryMode;
+  mode?: QueryMode
 
   @ApiProperty({
     required: false,
@@ -137,5 +138,5 @@ export class StringNullableFilter {
     nullable: true,
   })
   @Type(() => String)
-  not?: string;
+  not?: string
 }

@@ -1,7 +1,7 @@
-import { Field, InputType } from "@nestjs/graphql";
-import { ApiProperty } from "@nestjs/swagger";
-import { IsOptional } from "class-validator";
-import { Type } from "class-transformer";
+import { Field, InputType } from '@nestjs/graphql'
+import { ApiProperty } from '@nestjs/swagger'
+import { Type } from 'class-transformer'
+import { IsOptional } from 'class-validator'
 @InputType({
   isAbstract: true,
   description: undefined,
@@ -27,7 +27,7 @@ export class DateTimeNullableFilter {
     nullable: true,
   })
   @Type(() => Date)
-  in?: Date[] | null;
+  in?: Date[] | null
 
   @ApiProperty({
     required: false,
@@ -38,7 +38,7 @@ export class DateTimeNullableFilter {
     nullable: true,
   })
   @Type(() => Date)
-  notIn?: Date[] | null;
+  notIn?: Date[] | null
 
   @ApiProperty({
     required: false,
@@ -49,7 +49,7 @@ export class DateTimeNullableFilter {
     nullable: true,
   })
   @Type(() => Date)
-  lt?: Date;
+  lt?: Date
 
   @ApiProperty({
     required: false,
@@ -60,7 +60,7 @@ export class DateTimeNullableFilter {
     nullable: true,
   })
   @Type(() => Date)
-  lte?: Date;
+  lte?: Date
 
   @ApiProperty({
     required: false,
@@ -71,7 +71,7 @@ export class DateTimeNullableFilter {
     nullable: true,
   })
   @Type(() => Date)
-  gt?: Date;
+  gt?: Date
 
   @ApiProperty({
     required: false,
@@ -82,7 +82,7 @@ export class DateTimeNullableFilter {
     nullable: true,
   })
   @Type(() => Date)
-  gte?: Date;
+  gte?: Date
 
   @ApiProperty({
     required: false,
@@ -93,5 +93,5 @@ export class DateTimeNullableFilter {
     nullable: true,
   })
   @Type(() => Date)
-  not?: Date;
+  not?: Date
 }

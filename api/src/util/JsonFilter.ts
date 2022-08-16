@@ -1,8 +1,9 @@
-import { Field, InputType } from "@nestjs/graphql";
-import { ApiProperty } from "@nestjs/swagger";
-import { IsOptional } from "class-validator";
-import { GraphQLJSONObject } from "graphql-type-json";
-import { InputJsonValue } from "../types";
+import { Field, InputType } from '@nestjs/graphql'
+import { ApiProperty } from '@nestjs/swagger'
+import { IsOptional } from 'class-validator'
+import { GraphQLJSONObject } from 'graphql-type-json'
+
+import { InputJsonValue } from '../types'
 
 @InputType({
   isAbstract: true,
@@ -17,7 +18,7 @@ export class JsonFilter {
   @Field(() => GraphQLJSONObject, {
     nullable: true,
   })
-  equals?: InputJsonValue;
+  equals?: InputJsonValue
 
   @ApiProperty({
     required: false,
@@ -27,5 +28,5 @@ export class JsonFilter {
   @Field(() => GraphQLJSONObject, {
     nullable: true,
   })
-  not?: InputJsonValue;
+  not?: InputJsonValue
 }

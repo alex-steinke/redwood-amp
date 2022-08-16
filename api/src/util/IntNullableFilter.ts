@@ -1,7 +1,7 @@
-import { Field, InputType, Int } from "@nestjs/graphql";
-import { ApiProperty } from "@nestjs/swagger";
-import { IsOptional } from "class-validator";
-import { Type } from "class-transformer";
+import { Field, InputType, Int } from '@nestjs/graphql'
+import { ApiProperty } from '@nestjs/swagger'
+import { Type } from 'class-transformer'
+import { IsOptional } from 'class-validator'
 
 @InputType({
   isAbstract: true,
@@ -28,7 +28,7 @@ export class IntNullableFilter {
     nullable: true,
   })
   @Type(() => Number)
-  in?: number[] | null;
+  in?: number[] | null
 
   @ApiProperty({
     required: false,
@@ -39,7 +39,7 @@ export class IntNullableFilter {
     nullable: true,
   })
   @Type(() => Number)
-  notIn?: number[] | null;
+  notIn?: number[] | null
 
   @ApiProperty({
     required: false,
@@ -50,7 +50,7 @@ export class IntNullableFilter {
     nullable: true,
   })
   @Type(() => Number)
-  lt?: number;
+  lt?: number
 
   @ApiProperty({
     required: false,
@@ -61,7 +61,7 @@ export class IntNullableFilter {
     nullable: true,
   })
   @Type(() => Number)
-  lte?: number;
+  lte?: number
 
   @ApiProperty({
     required: false,
@@ -72,7 +72,7 @@ export class IntNullableFilter {
     nullable: true,
   })
   @Type(() => Number)
-  gt?: number;
+  gt?: number
 
   @ApiProperty({
     required: false,
@@ -83,7 +83,7 @@ export class IntNullableFilter {
     nullable: true,
   })
   @Type(() => Number)
-  gte?: number;
+  gte?: number
 
   @ApiProperty({
     required: false,
@@ -94,5 +94,5 @@ export class IntNullableFilter {
     nullable: true,
   })
   @Type(() => Number)
-  not?: number;
+  not?: number
 }

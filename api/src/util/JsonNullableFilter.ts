@@ -1,8 +1,8 @@
-import { JsonValue } from "type-fest";
-import { Field, InputType } from "@nestjs/graphql";
-import { ApiProperty } from "@nestjs/swagger";
-import { IsOptional } from "class-validator";
-import { GraphQLJSONObject } from "graphql-type-json";
+import { Field, InputType } from '@nestjs/graphql'
+import { ApiProperty } from '@nestjs/swagger'
+import { IsOptional } from 'class-validator'
+import { GraphQLJSONObject } from 'graphql-type-json'
+import { JsonValue } from 'type-fest'
 
 @InputType({
   isAbstract: true,
@@ -17,7 +17,7 @@ export class JsonNullableFilter {
   @Field(() => GraphQLJSONObject, {
     nullable: true,
   })
-  equals?: JsonValue;
+  equals?: JsonValue
 
   @ApiProperty({
     required: false,
@@ -27,5 +27,5 @@ export class JsonNullableFilter {
   @Field(() => GraphQLJSONObject, {
     nullable: true,
   })
-  not?: JsonValue;
+  not?: JsonValue
 }

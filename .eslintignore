@@ -1,3 +1,10 @@
 api/dist
 api/src/**/base/**/*.*
+api/src/auth/**/*.*
+api/decorators/**/*.*
+api/src/health/**/*.*
+api/src/interceptors/**/*.*
+api/src/tests/**/*.*
+api/src/util/**/*.*
 api/*.*
+api/src/*.*

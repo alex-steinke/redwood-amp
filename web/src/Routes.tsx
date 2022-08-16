@@ -9,7 +9,6 @@
 
 import { Router, Route, Set } from '@redwoodjs/router'
 
-
 const Routes = () => {
   return (
     <Router>
