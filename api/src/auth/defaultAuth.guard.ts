@@ -1,15 +1,13 @@
-import { ExecutionContext, Injectable } from '@nestjs/common'
-import { Reflector } from '@nestjs/core'
-import { Observable } from 'rxjs'
-
-import { IS_PUBLIC_KEY } from '../decorators/public.decorator'
-
-import { JwtAuthGuard } from './jwt/jwtAuth.guard'
+import { Observable } from "rxjs";
+import { ExecutionContext, Injectable } from "@nestjs/common";
+import { Reflector } from "@nestjs/core";
+import { IS_PUBLIC_KEY } from "../decorators/public.decorator";
+import { JwtAuthGuard } from "./jwt/jwtAuth.guard";
 
 @Injectable()
 export class DefaultAuthGuard extends JwtAuthGuard {
   constructor(private readonly reflector: Reflector) {
-    super()
+    super();
   }
 
   canActivate(
@@ -18,12 +16,12 @@ export class DefaultAuthGuard extends JwtAuthGuard {
     const isPublic = this.reflector.get<boolean>(
       IS_PUBLIC_KEY,
       context.getHandler()
-    )
+    );
 
     if (isPublic) {
-      return true
+      return true;
     }
 
-    return super.canActivate(context)
+    return super.canActivate(context);
   }
 }
