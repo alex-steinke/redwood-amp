@@ -1,0 +1,3 @@
+api/dist
+api/**/**/*.*
+!api/src/swagger.ts
