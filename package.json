@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "api",
+      "web",
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "web": "yarn workspace web run web",
+    "api": "yarn workspace api run start"
+  },
+  "devDependencies": {
+    "@redwoodjs/core": "2.2.0",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+  },
+  "eslintConfig": {
+    "extends": "@redwoodjs/eslint-config",
+    "root": true
+  },
+  "engines": {
+    "node": ">=14.19 <=16.x",
+    "yarn": ">=1.15"
+  },
+  "prisma": {
+    "seed": "yarn rw exec seed"
+  },
+  "packageManager": "yarn@3.2.1"
+}
