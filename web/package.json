@@ -13,14 +13,14 @@
     ]
   },
   "scripts": {
-    "web": "yarn redwood dev web"
+    "web": "yarn redwood dev web",
+    "gen": "yarn graphql-codegen --config ./config/codegen.yaml"
   },
   "dependencies": {
-    "@graphql-tools/load": "^7.7.4",
-    "@graphql-tools/url-loader": "^7.5.2",
     "@redwoodjs/forms": "2.2.0",
     "@redwoodjs/router": "2.2.0",
     "@redwoodjs/web": "2.2.0",
+    "graphql": "^16.6.0",
     "i18n": "^0.15.0",
     "i18next": "^21.9.0",
     "i18next-browser-languagedetector": "^6.1.5",
@@ -32,7 +32,11 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.1.3",
+    "@graphql-codegen/cli": "^2.11.6",
+    "@graphql-codegen/typescript": "^2.7.3",
+    "@graphql-codegen/typescript-resolvers": "^2.7.3",
     "autoprefixer": "^10.4.8",
+    "graphql-code-generator": "^0.18.2",
     "postcss": "^8.4.16",
     "postcss-loader": "^7.0.1",
     "tailwindcss": "^3.1.8"
