@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@redwoodjs/core": "2.2.0",
+    "graphql": "^16.6.0",
     "prettier-plugin-tailwindcss": "^0.1.13"
   },
   "eslintConfig": {
